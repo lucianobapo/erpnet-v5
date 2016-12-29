@@ -47,18 +47,18 @@ npm install font-awesome --save-dev
 php artisan vendor:publish --tag=erpnetWidgetResourceGulpfile
 gulp --gulpfile=gulpfileErpnetWidgetResource.js
 ```
+
 ***Updating run***
 ```shell
 git cmt && ssh erpnet-v5.ilhanet.com
+cd code/erpnet-v5/ && git pull && composer install && exit
 ```
 
 ## Production command
 ***First time run***
 ```shell
 ssh erpnet-v5.ilhanet.com
-cd code/erpnet-v5/ && git pull
-cd code/erpnet-v5/ && git pull && composer install
-cd code/erpnet-v5/ && git pull && exit
+cd code/erpnet-v5/ && git pull && composer install && exit
 ```
 
 ***First time run***
