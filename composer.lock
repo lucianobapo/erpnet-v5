@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cc8c285277112b32721fb20118eb7ae3",
+    "hash": "7ad4f05a139f83b863358f07148804ac",
     "content-hash": "b674b680dc9b8aca540b57e846de1a23",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.20.11",
+            "version": "3.18.23",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "39d122b903813da2f53312fd3146acaa83a6d9f6"
+                "reference": "a2791b6f14b7aa6eeb4fb9f3f779cc291ab455db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/39d122b903813da2f53312fd3146acaa83a6d9f6",
-                "reference": "39d122b903813da2f53312fd3146acaa83a6d9f6",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/a2791b6f14b7aa6eeb4fb9f3f779cc291ab455db",
+                "reference": "a2791b6f14b7aa6eeb4fb9f3f779cc291ab455db",
                 "shasum": ""
             },
             "require": {
-                "guzzlehttp/guzzle": "^5.3.1|^6.2.1",
+                "guzzlehttp/guzzle": "~5.3|~6.0.1|~6.1",
                 "guzzlehttp/promises": "~1.0",
-                "guzzlehttp/psr7": "~1.3.1",
+                "guzzlehttp/psr7": "~1.0",
                 "mtdowling/jmespath.php": "~2.2",
                 "php": ">=5.5"
             },
@@ -85,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2016-12-22 20:47:16"
+            "time": "2016-06-30 19:49:43"
         },
         {
             "name": "behat/transliterator",
@@ -1082,12 +1082,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "e7dea7f16d2119f443af15c357f35461c1455443"
+                "reference": "8bc9d2de8834a9b74921807ba29d081703868078"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/e7dea7f16d2119f443af15c357f35461c1455443",
-                "reference": "e7dea7f16d2119f443af15c357f35461c1455443",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8bc9d2de8834a9b74921807ba29d081703868078",
+                "reference": "8bc9d2de8834a9b74921807ba29d081703868078",
                 "shasum": ""
             },
             "require": {
@@ -1136,7 +1136,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2016-12-27 10:24:35"
+            "time": "2016-12-29 13:24:34"
         },
         {
             "name": "guzzlehttp/promises",
@@ -1191,16 +1191,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.3.1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b"
+                "reference": "5f17a79615bd36d52d3b3ce44075aec02605d8bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
-                "reference": "5c6447c9df362e8f8093bda8f5d8873fe5c7f65b",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/5f17a79615bd36d52d3b3ce44075aec02605d8bf",
+                "reference": "5f17a79615bd36d52d3b3ce44075aec02605d8bf",
                 "shasum": ""
             },
             "require": {
@@ -1236,16 +1236,23 @@
                     "name": "Michael Dowling",
                     "email": "mtdowling@gmail.com",
                     "homepage": "https://github.com/mtdowling"
+                },
+                {
+                    "name": "Tobias Schultze",
+                    "homepage": "https://github.com/Tobion"
                 }
             ],
-            "description": "PSR-7 message implementation",
+            "description": "PSR-7 message implementation that also provides common utility methods",
             "keywords": [
                 "http",
                 "message",
+                "request",
+                "response",
                 "stream",
-                "uri"
+                "uri",
+                "url"
             ],
-            "time": "2016-06-24 23:00:38"
+            "time": "2016-11-02 14:11:11"
         },
         {
             "name": "ilhanet/erpnet-file-manager",
@@ -1369,12 +1376,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucianobapo/erpnet-models.git",
-                "reference": "03dd61e366a8c5fe543c52392764ce39ae0d79f4"
+                "reference": "702ac2a2744856c9412ffdeea05e8b34d851102c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucianobapo/erpnet-models/zipball/03dd61e366a8c5fe543c52392764ce39ae0d79f4",
-                "reference": "03dd61e366a8c5fe543c52392764ce39ae0d79f4",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-models/zipball/702ac2a2744856c9412ffdeea05e8b34d851102c",
+                "reference": "702ac2a2744856c9412ffdeea05e8b34d851102c",
                 "shasum": ""
             },
             "require": {
@@ -1399,7 +1406,7 @@
                     "email": "luciano.bapo@gmail.com"
                 }
             ],
-            "time": "2016-12-28 00:12:49"
+            "time": "2016-12-29 18:02:52"
         },
         {
             "name": "ilhanet/erpnet-social-auth",
@@ -1447,12 +1454,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucianobapo/erpnet-widget-resource.git",
-                "reference": "117a3331aca7c473d82a18033bfca2eb5988d07d"
+                "reference": "541280f600d545f13c6beb0e139e3845949bc08c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucianobapo/erpnet-widget-resource/zipball/117a3331aca7c473d82a18033bfca2eb5988d07d",
-                "reference": "117a3331aca7c473d82a18033bfca2eb5988d07d",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-widget-resource/zipball/541280f600d545f13c6beb0e139e3845949bc08c",
+                "reference": "541280f600d545f13c6beb0e139e3845949bc08c",
                 "shasum": ""
             },
             "require": {
@@ -1477,7 +1484,7 @@
                     "email": "luciano.bapo@gmail.com"
                 }
             ],
-            "time": "2016-12-28 00:02:47"
+            "time": "2016-12-29 18:02:49"
         },
         {
             "name": "intervention/image",
@@ -1860,12 +1867,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "d7a4e31779c33f317a7a76e7082ca8bbd4ef2057"
+                "reference": "26059fc78f57e8453362e8f6fd73dd47cfa9b523"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/d7a4e31779c33f317a7a76e7082ca8bbd4ef2057",
-                "reference": "d7a4e31779c33f317a7a76e7082ca8bbd4ef2057",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/26059fc78f57e8453362e8f6fd73dd47cfa9b523",
+                "reference": "26059fc78f57e8453362e8f6fd73dd47cfa9b523",
                 "shasum": ""
             },
             "require": {
@@ -1980,7 +1987,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2016-12-28 19:33:33"
+            "time": "2016-12-29 17:02:48"
         },
         {
             "name": "laravel/socialite",
@@ -3247,19 +3254,20 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "3547577659c1a035093b70fce5ae393b3c94f44e"
+                "reference": "e34123081ded3fbb4d8ccdff9ece3a4c8f6046b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/3547577659c1a035093b70fce5ae393b3c94f44e",
-                "reference": "3547577659c1a035093b70fce5ae393b3c94f44e",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/e34123081ded3fbb4d8ccdff9ece3a4c8f6046b5",
+                "reference": "e34123081ded3fbb4d8ccdff9ece3a4c8f6046b5",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "mockery/mockery": "~0.9.1"
+                "mockery/mockery": "~0.9.1",
+                "symfony/phpunit-bridge": "~3.2"
             },
             "type": "library",
             "extra": {
@@ -3292,7 +3300,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-12-20 05:27:43"
+            "time": "2016-12-29 10:10:06"
         },
         {
             "name": "symfony/console",
@@ -4767,12 +4775,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe"
+                "reference": "86c7f0affb9e2c17b1fe53a82cf0aa2ed5a31990"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/50fd2be8f3e23e91da825f36f08e5f9633076ffe",
-                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/86c7f0affb9e2c17b1fe53a82cf0aa2ed5a31990",
+                "reference": "86c7f0affb9e2c17b1fe53a82cf0aa2ed5a31990",
                 "shasum": ""
             },
             "require": {
@@ -4784,7 +4792,7 @@
                 "myclabs/deep-copy": "~1.3",
                 "php": "^5.6 || ^7.0",
                 "phpspec/prophecy": "^1.6.2",
-                "phpunit/php-code-coverage": "^4.0.3",
+                "phpunit/php-code-coverage": "^4.0.4",
                 "phpunit/php-file-iterator": "~1.4",
                 "phpunit/php-text-template": "~1.2",
                 "phpunit/php-timer": "^1.0.6",
@@ -4841,7 +4849,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-28 07:18:51"
+            "time": "2016-12-29 06:52:24"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
