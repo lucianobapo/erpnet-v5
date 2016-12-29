@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "7ad4f05a139f83b863358f07148804ac",
+    "hash": "cc8c285277112b32721fb20118eb7ae3",
     "content-hash": "b674b680dc9b8aca540b57e846de1a23",
     "packages": [
         {
@@ -1454,12 +1454,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucianobapo/erpnet-widget-resource.git",
-                "reference": "541280f600d545f13c6beb0e139e3845949bc08c"
+                "reference": "aaa9cc64b0b6b2cc022416c99247c1984bc825e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucianobapo/erpnet-widget-resource/zipball/541280f600d545f13c6beb0e139e3845949bc08c",
-                "reference": "541280f600d545f13c6beb0e139e3845949bc08c",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-widget-resource/zipball/aaa9cc64b0b6b2cc022416c99247c1984bc825e3",
+                "reference": "aaa9cc64b0b6b2cc022416c99247c1984bc825e3",
                 "shasum": ""
             },
             "require": {
@@ -1484,7 +1484,7 @@
                     "email": "luciano.bapo@gmail.com"
                 }
             ],
-            "time": "2016-12-29 18:02:49"
+            "time": "2016-12-29 18:33:12"
         },
         {
             "name": "intervention/image",

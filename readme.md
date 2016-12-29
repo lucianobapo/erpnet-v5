@@ -39,14 +39,33 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
 
-rsync -rvztPhe ssh /home/luciano/code/erpnet-v5/.env.production erpnet-v5.ilhanet.com:code/erpnet-v5/.env
+## Dev command
+***First time run***
+```shell
+php artisan make:auth
+npm install font-awesome --save-dev
+php artisan vendor:publish --tag=erpnetWidgetResourceGulpfile
+gulp --gulpfile=gulpfileErpnetWidgetResource.js
+```
+***Updating run***
+```shell
+git cmt && ssh erpnet-v5.ilhanet.com
+```
 
+## Production command
+***First time run***
+```shell
 ssh erpnet-v5.ilhanet.com
 cd code/erpnet-v5/ && git pull
+cd code/erpnet-v5/ && git pull && composer install
 cd code/erpnet-v5/ && git pull && exit
+```
 
-php artisan vendor:publish --tag=erpnetMigratesMigrations
-
+***First time run***
+```shell
+rsync -rvztPhe ssh /home/luciano/code/erpnet-v5/.env.production erpnet-v5.ilhanet.com:code/erpnet-v5/.env
+php artisan vendor:publish --tag=erpnetWidgetResourceFonts --force
+php artisan vendor:publish --tag=erpnetMigratesMigrations --force
 sudo ./permissions.sh
 php artisan migrate
-php artisan make:auth
+```

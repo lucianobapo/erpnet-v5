@@ -42,11 +42,7 @@
         ],
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
-            "php artisan optimize",
-            "npm install font-awesome --save",
-            "php artisan vendor:publish --tag=erpnetWidgetResourceFonts",
-            "php artisan vendor:publish --tag=erpnetWidgetResourceGulpfile",
-            "gulp --gulpfile=gulpfileErpnetWidgetResource.js"
+            "php artisan optimize"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
