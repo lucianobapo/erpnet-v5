@@ -29,6 +29,9 @@ class AppServiceProvider extends ServiceProvider
         if (class_exists(\ErpNET\Models\Providers\ErpnetModelsServiceProvider::class))
             $this->app->register(\ErpNET\Models\Providers\ErpnetModelsServiceProvider::class);
 
+        if (class_exists(\ErpNET\Delivery\Providers\ErpnetDeliveryServiceProvider::class))
+            $this->app->register(\ErpNET\Delivery\Providers\ErpnetDeliveryServiceProvider::class);
+
         if (class_exists(\ErpNET\WidgetResource\Providers\ErpnetWidgetResourceServiceProvider::class))
             $this->app->register(\ErpNET\WidgetResource\Providers\ErpnetWidgetResourceServiceProvider::class);
 

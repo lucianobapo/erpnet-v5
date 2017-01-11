@@ -17,107 +17,130 @@ return [
          *   ],
          * ],
          */
-        'users' => [
-            'fields' => [
-                'mandante',
-                'name',
-                'avatar',
-                'password',
-                'username',
-                'email',
-                'provider',
-                'provider_id',
-                'activation_code',
-                'active',
-            ],
-        ],
-        'orders' => [
-//            'transformPresenter' => [
-//                'id' => function(\Illuminate\Database\Eloquent\Model $model){ return (int) $model->id; },
+//        'users' => [
+//            'fields' => [
+//                'mandante',
+//                'name',
+//                'avatar',
+//                'password',
+//                'username',
+//                'email',
+//                'provider',
+//                'provider_id',
+//                'activation_code',
+//                'active',
 //            ],
-            'fields' => [
-                'id' => [
-                    'header' => true,
-                    'customShow' => function ($item) {
-                        $formatter = new \NumberFormatter(config('app.locale'), \NumberFormatter::CURRENCY);
-                        $header = \Carbon\Carbon::parse($item['posted_at'])->formatLocalized('%d/%m/%Y %X');
-                        $total = 0;
-                        foreach ($item['orderItems'] as $orderItem) {
-                            $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
-                        }
-                        $header = $header . ' ' . t('Total') . ': ' . $formatter->format($total);
-
-                        return $header;
-                    },
-                ],
-                'partner' => [
-//                    'label' => t('Partner'),
-                    'customShow' => function ($item) {
-                        return $item['partner']['nome'];
-                    },
-                ],
-                'address' => [
-//                    'label' => t('Address'),
-                    'customShow' => function ($item) {
-                        $address = $item['address']['cep'] . ' - ' . $item['address']['logradouro'] . ', ' . $item['address']['numero'];
-
-                        if (!empty($item['address']['complemento']))
-                            $address = $address . ' - ' . $item['address']['complemento'];
-
-                        if (!empty($item['address']['obs']))
-                            $address = $address . ' (' . $item['address']['obs'] . ')';
-                        return $address;
-                    },
-                ],
-                'orderSharedStats' => [
-//                    'label' => t('Status'),
-                    'customShow' => function ($item) {
-                        if (count($item['orderSharedStats']) > 0) {
-                            $line = '';
-                            foreach ($item['orderSharedStats'] as $orderSharedStat) {
-                                $line = $line . $orderSharedStat['descricao'] . ', ';
-                            }
-                            return substr($line, 0, -2);
-                        } else
-                            return t('No Status');
-                    },
-                ],
-                'orderItems' => [
-//                    'label' => t('Items'),
-                    'customShow' => function ($item) {
-                        if (count($item['orderItems']) > 0) {
-                            $formatter = new NumberFormatter(config('app.locale'), NumberFormatter::CURRENCY);
-                            $line = '';
-                            $total = 0;
-                            foreach ($item['orderItems'] as $orderItem) {
-                                $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
-                                $line = $line . '<li>' . $orderItem['product']['nome'] . ' - ' . $orderItem['quantidade'] . 'x ' . $formatter->format($orderItem['valor_unitario']) . '</li>';
-                            }
-//                        $line = $line . '<li>'. t('Total') . ': ' . $formatter->format($total) . '</li>';
-                            return '(' . t('Total') . ': <strong>' . $formatter->format($total) . '</strong>)<ul>' . $line . '</ul>';
-                        } else
-                            return t('No Items');
-                    },
-                ],
-            ],
-        ],
+//        ],
+//        'orders' => [
+////            'transformPresenter' => [
+////                'id' => function(\Illuminate\Database\Eloquent\Model $model){ return (int) $model->id; },
+////            ],
+//            'fields' => [
+//                'id' => [
+//                    'header' => true,
+//                    'customShow' => function ($item) {
+//                        $formatter = new \NumberFormatter(config('app.locale'), \NumberFormatter::CURRENCY);
+//                        $header = \Carbon\Carbon::parse($item['posted_at'])->formatLocalized('%d/%m/%Y %X');
+//                        $total = 0;
+//                        foreach ($item['orderItems'] as $orderItem) {
+//                            $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
+//                        }
+//                        $header = $header . ' ' . t('Total') . ': ' . $formatter->format($total);
+//
+//                        return $header;
+//                    },
+//                ],
+//                'partner' => [
+////                    'label' => t('Partner'),
+//                    'customShow' => function ($item) {
+//                        return $item['partner']['nome'];
+//                    },
+//                ],
+//                'address' => [
+////                    'label' => t('Address'),
+//                    'customShow' => function ($item) {
+//                        $address = $item['address']['cep'] . ' - ' . $item['address']['logradouro'] . ', ' . $item['address']['numero'];
+//
+//                        if (!empty($item['address']['complemento']))
+//                            $address = $address . ' - ' . $item['address']['complemento'];
+//
+//                        if (!empty($item['address']['obs']))
+//                            $address = $address . ' (' . $item['address']['obs'] . ')';
+//                        return $address;
+//                    },
+//                ],
+//                'orderSharedStats' => [
+////                    'label' => t('Status'),
+//                    'customShow' => function ($item) {
+//                        if (count($item['orderSharedStats']) > 0) {
+//                            $line = '';
+//                            foreach ($item['orderSharedStats'] as $orderSharedStat) {
+//                                $line = $line . $orderSharedStat['descricao'] . ', ';
+//                            }
+//                            return substr($line, 0, -2);
+//                        } else
+//                            return t('No Status');
+//                    },
+//                ],
+//                'orderItems' => [
+////                    'label' => t('Items'),
+//                    'customShow' => function ($item) {
+//                        if (count($item['orderItems']) > 0) {
+//                            $formatter = new NumberFormatter(config('app.locale'), NumberFormatter::CURRENCY);
+//                            $line = '';
+//                            $total = 0;
+//                            foreach ($item['orderItems'] as $orderItem) {
+//                                $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
+//                                $line = $line . '<li>' . $orderItem['product']['nome'] . ' - ' . $orderItem['quantidade'] . 'x ' . $formatter->format($orderItem['valor_unitario']) . '</li>';
+//                            }
+////                        $line = $line . '<li>'. t('Total') . ': ' . $formatter->format($total) . '</li>';
+//                            return '(' . t('Total') . ': <strong>' . $formatter->format($total) . '</strong>)<ul>' . $line . '</ul>';
+//                        } else
+//                            return t('No Items');
+//                    },
+//                ],
+//            ],
+//        ],
 //        'mandantes' => [
 //            'fields' => [
 //                'mandante',
 //            ],
 //        ],
-        'partners' => [
+//        'partners' => [
+//            'fields' => [
+//                'nome',
+//            ],
+//        ],
+        'product_groups' => [
+            'routeLinkName' => 'Product Groups',
             'fields' => [
-                'nome',
-            ],
-        ],
-        'attachments' => [
-            'fields' => [
-                'order_id',
                 'mandante',
-                'file',
+                'grupo',
+                'icone',
             ],
         ],
+        'products' => [
+//            'transformPresenter' => [
+//                'id' => function(\Illuminate\Database\Eloquent\Model $model){ return (int) $model->id; },
+//                'nome' => function(\Illuminate\Database\Eloquent\Model $model){ return $model->nome; },
+//            ],
+            'fields' => [
+                'id' => [
+                    'header' => true,
+                    'customShow' => function ($item) {
+                        return $item['nome'];
+                    },
+                ],
+//                'nome',
+            ],
+        ],
+//        'attachments' => [
+//            'fields' => [
+//                'order_id',
+//                'mandante',
+//                'file',
+//            ],
+//        ],
 //        'pages' => [
 //            'fields' => [
 //                'ordem',
