@@ -4,7 +4,6 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "type": "project",
-    "minimum-stability": "dev",
     "require": {
         "php": ">=5.6.4",
         "ilhanet/erpnet-delivery": "dev-master",
@@ -12,6 +11,9 @@
         "ilhanet/erpnet-models": "dev-master",
         "ilhanet/erpnet-social-auth": "dev-master",
         "ilhanet/erpnet-widget-resource": "dev-master",
+        "dingo/api": "1.0.*@dev",
+        "ilhanet/erpnet-file-manager": "dev-master",
+        "ilhanet/erpnet-helper": "dev-master",
         "laravel/framework": "5.3.*"
     },
     "require-dev": {

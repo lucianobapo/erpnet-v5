@@ -31,86 +31,127 @@ return [
 //                'active',
 //            ],
 //        ],
-//        'orders' => [
-////            'transformPresenter' => [
-////                'id' => function(\Illuminate\Database\Eloquent\Model $model){ return (int) $model->id; },
-////            ],
-//            'fields' => [
-//                'id' => [
-//                    'header' => true,
-//                    'customShow' => function ($item) {
-//                        $formatter = new \NumberFormatter(config('app.locale'), \NumberFormatter::CURRENCY);
-//                        $header = \Carbon\Carbon::parse($item['posted_at'])->formatLocalized('%d/%m/%Y %X');
-//                        $total = 0;
-//                        foreach ($item['orderItems'] as $orderItem) {
-//                            $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
-//                        }
-//                        $header = $header . ' ' . t('Total') . ': ' . $formatter->format($total);
-//
-//                        return $header;
-//                    },
-//                ],
-//                'partner' => [
-////                    'label' => t('Partner'),
-//                    'customShow' => function ($item) {
-//                        return $item['partner']['nome'];
-//                    },
-//                ],
-//                'address' => [
-////                    'label' => t('Address'),
-//                    'customShow' => function ($item) {
-//                        $address = $item['address']['cep'] . ' - ' . $item['address']['logradouro'] . ', ' . $item['address']['numero'];
-//
-//                        if (!empty($item['address']['complemento']))
-//                            $address = $address . ' - ' . $item['address']['complemento'];
-//
-//                        if (!empty($item['address']['obs']))
-//                            $address = $address . ' (' . $item['address']['obs'] . ')';
-//                        return $address;
-//                    },
-//                ],
-//                'orderSharedStats' => [
-////                    'label' => t('Status'),
-//                    'customShow' => function ($item) {
-//                        if (count($item['orderSharedStats']) > 0) {
-//                            $line = '';
-//                            foreach ($item['orderSharedStats'] as $orderSharedStat) {
-//                                $line = $line . $orderSharedStat['descricao'] . ', ';
-//                            }
-//                            return substr($line, 0, -2);
-//                        } else
-//                            return t('No Status');
-//                    },
-//                ],
-//                'orderItems' => [
-////                    'label' => t('Items'),
-//                    'customShow' => function ($item) {
-//                        if (count($item['orderItems']) > 0) {
-//                            $formatter = new NumberFormatter(config('app.locale'), NumberFormatter::CURRENCY);
-//                            $line = '';
-//                            $total = 0;
-//                            foreach ($item['orderItems'] as $orderItem) {
-//                                $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
-//                                $line = $line . '<li>' . $orderItem['product']['nome'] . ' - ' . $orderItem['quantidade'] . 'x ' . $formatter->format($orderItem['valor_unitario']) . '</li>';
-//                            }
-////                        $line = $line . '<li>'. t('Total') . ': ' . $formatter->format($total) . '</li>';
-//                            return '(' . t('Total') . ': <strong>' . $formatter->format($total) . '</strong>)<ul>' . $line . '</ul>';
-//                        } else
-//                            return t('No Items');
-//                    },
-//                ],
+        'orders' => [
+//            'transformPresenter' => [
+//                'id' => function(\Illuminate\Database\Eloquent\Model $model){ return (int) $model->id; },
 //            ],
-//        ],
+            'fields' => [
+                'id' => [
+                    'header' => true,
+                    'customShow' => function ($item) {
+                        $formatter = new \NumberFormatter(config('app.locale'), \NumberFormatter::CURRENCY);
+                        $header = \Carbon\Carbon::parse($item['posted_at'])->formatLocalized('%d/%m/%Y %X');
+                        $total = 0;
+                        foreach ($item['orderItems'] as $orderItem) {
+                            $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
+                        }
+                        $header = $header . ' ' . t('Total') . ': ' . $formatter->format($total);
+
+                        return $header;
+                    },
+                ],
+                'mandante',
+                'currency_id' => [
+//                    'label' => t('Partner'),
+                    'customShow' => function ($item) {
+                        return $item['sharedCurrency']['nome_universal'].' - '.$item['sharedCurrency']['descricao'];
+                    },
+                ],
+                'type_id' => [
+//                    'label' => t('Partner'),
+                    'customShow' => function ($item) {
+                        return $item['sharedOrderType']['descricao'];
+                    },
+                ],
+                'payment_id' => [
+//                    'label' => t('Partner'),
+                    'customShow' => function ($item) {
+                        return $item['sharedOrderPayment']['descricao'];
+                    },
+                ],
+                'partner_id' => [
+//                    'label' => t('Partner'),
+                    'customShow' => function ($item) {
+                        return $item['partner']['nome'];
+                    },
+                ],
+                'address_id' => [
+//                    'label' => t('Address'),
+                    'customShow' => function ($item) {
+                        $address = $item['address']['cep'] . ' - ' . $item['address']['logradouro'] . ', ' . $item['address']['numero'];
+
+                        if (!empty($item['address']['complemento']))
+                            $address = $address . ' - ' . $item['address']['complemento'];
+
+                        if (!empty($item['address']['obs']))
+                            $address = $address . ' (' . $item['address']['obs'] . ')';
+                        return $address;
+                    },
+                ],
+                'posted_at',
+                'orderSharedStats' => [
+//                    'label' => t('Status'),
+                    'customShow' => function ($item) {
+                        if (count($item['orderSharedStats']) > 0) {
+                            $line = '';
+                            foreach ($item['orderSharedStats'] as $orderSharedStat) {
+                                $line = $line . $orderSharedStat['descricao'] . ', ';
+                            }
+                            return substr($line, 0, -2);
+                        } else
+                            return t('No Status');
+                    },
+                ],
+                'orderItems' => [
+//                    'label' => t('Items'),
+                    'customShow' => function ($item) {
+                        if (count($item['orderItems']) > 0) {
+                            $formatter = new NumberFormatter(config('app.locale'), NumberFormatter::CURRENCY);
+                            $line = '';
+                            $total = 0;
+                            foreach ($item['orderItems'] as $orderItem) {
+                                $total = $total + ($orderItem['quantidade'] * $orderItem['valor_unitario']);
+                                $line = $line . '<li>' . $orderItem['product']['nome'] . ' - ' . $orderItem['quantidade'] . 'x ' . $formatter->format($orderItem['valor_unitario']) . '</li>';
+                            }
+//                        $line = $line . '<li>'. t('Total') . ': ' . $formatter->format($total) . '</li>';
+                            return '(' . t('Total') . ': <strong>' . $formatter->format($total) . '</strong>)<ul>' . $line . '</ul>';
+                        } else
+                            return t('No Items');
+                    },
+                ],
+                'observacao',
+            ],
+        ],
 //        'mandantes' => [
 //            'fields' => [
 //                'mandante',
 //            ],
 //        ],
-//        'partners' => [
-//            'fields' => [
-//                'nome',
-//            ],
-//        ],
+        'partners' => [
+            'fields' => [
+                'id' => [
+                    'header' => true,
+                    'customShow' => function ($item) {
+                        return $item['nome'];
+                    },
+                ],
+                'mandante',
+                'nome',
+                'partnerSharedStats' => [
+//                    'label' => t('Status'),
+                    'customShow' => function ($item) {
+                        if (count($item['partnerSharedStats']) > 0) {
+                            $line = '';
+                            foreach ($item['partnerSharedStats'] as $sharedStat) {
+                                $line = $line . $sharedStat['descricao'] . ', ';
+                            }
+                            return substr($line, 0, -2);
+                        } else
+                            return t('No Status');
+                    },
+                ],
+            ],
+        ],
         'product_groups' => [
             'routeLinkName' => 'Product Groups',
             'fields' => [
@@ -131,16 +172,60 @@ return [
                         return $item['nome'];
                     },
                 ],
-//                'nome',
+                'mandante',
+                'nome',
             ],
         ],
-//        'attachments' => [
-//            'fields' => [
-//                'order_id',
-//                'mandante',
-//                'file',
-//            ],
-//        ],
+        'addresses' => [
+            'fields' => [
+                'mandante',
+                'cep',
+                'logradouro',
+                'numero',
+                'complemento',
+                'bairro',
+            ],
+        ],
+        'attachments' => [
+            'fields' => [
+                'order_id',
+                'mandante',
+                'file',
+            ],
+        ],
+        'item_orders' => [
+            'fields' => [
+                'mandante',
+                'quantidade',
+                'valor_unitario',
+                'cost_id',
+                'product_id',
+            ],
+        ],
+        'shared_stats' => [
+            'fields' => [
+                'status',
+                'descricao',
+            ],
+        ],
+        'shared_order_types' => [
+            'fields' => [
+                'tipo',
+                'descricao',
+            ],
+        ],
+        'shared_order_payments' => [
+            'fields' => [
+                'pagamento',
+                'descricao',
+            ],
+        ],
+        'shared_currencies' => [
+            'fields' => [
+                'nome_universal',
+                'descricao',
+            ],
+        ],
 //        'pages' => [
 //            'fields' => [
 //                'ordem',
