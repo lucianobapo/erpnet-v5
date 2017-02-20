@@ -50,6 +50,11 @@ gulp --gulpfile=gulpfileErpnetWidgetResource.js
 
 ***Updating run***
 ```shell
+cd ~/code/erpnet-v5/packages/erpnet-delivery && git cmt
+cd ~/code/erpnet-v5/packages/erpnet-migrates && git cmt
+cd ~/code/erpnet-v5/packages/erpnet-models && git cmt
+cd ~/code/erpnet-v5 && composer update
+
 git cmt && ssh erpnet-v5.ilhanet.com
 cd code/erpnet-v5/ && git pull && composer install && exit
 ```

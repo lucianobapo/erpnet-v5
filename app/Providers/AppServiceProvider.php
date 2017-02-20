@@ -23,6 +23,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
+        if (config('app.env')=='local' && class_exists(\Barryvdh\Debugbar\ServiceProvider::class))
+            $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+
         if (class_exists(\ErpNET\Migrates\Providers\ErpnetMigratesServiceProvider::class))
             $this->app->register(\ErpNET\Migrates\Providers\ErpnetMigratesServiceProvider::class);
 
@@ -37,5 +41,6 @@ class AppServiceProvider extends ServiceProvider
 
         if (class_exists(\ErpNET\SocialAuth\Providers\ErpnetSocialAuthServiceProvider::class))
             $this->app->register(\ErpNET\SocialAuth\Providers\ErpnetSocialAuthServiceProvider::class);
+
     }
 }

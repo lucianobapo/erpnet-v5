@@ -1,4 +1,18 @@
 #!/bin/sh
+#fix to Debugbar files
+chown luciano:www-data -R storage/debugbar/
+chmod -R ug+w storage/debugbar/
+chmod -R o-w storage/debugbar/
+
+find storage/debugbar/ -type f -exec chmod ugo-x {} \;
+find storage/debugbar/ -type d -exec chmod ugo+x {} \;
+
+find storage/debugbar/ -type f -exec chmod g-s {} \;
+find storage/debugbar/ -type d -exec chmod g+s {} \;
+
+setfacl -dR -m u::rwx storage/debugbar/
+setfacl -dR -m g::rwx storage/debugbar/
+
 #fix to Monolog files
 chown luciano:www-data -R storage/logs/
 chmod -R ug+w storage/logs/

@@ -246,6 +246,13 @@ return [
                 'last_activity',
             ],
         ],
+        'cache' => [
+            'fields' => [
+                'key',
+                'value',
+                'expiration',
+            ],
+        ],
 //        'posts' => [
 ////            'transformPresenter' => [
 ////                'id' => function(\Illuminate\Database\Eloquent\Model $model){ return (int) $model->id; },
