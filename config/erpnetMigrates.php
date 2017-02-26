@@ -186,6 +186,14 @@ return [
                 'bairro',
             ],
         ],
+        'contacts' => [
+            'fields' => [
+                'partner_id',
+                'mandante',
+                'contact_type',
+                'contact_data',
+            ],
+        ],
         'attachments' => [
             'fields' => [
                 'order_id',
