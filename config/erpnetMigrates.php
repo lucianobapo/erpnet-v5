@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'forceProductStockCache'=>true,
     'tables' => [
         /*
          * Config example
