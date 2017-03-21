@@ -48,7 +48,7 @@ php artisan vendor:publish --tag=erpnetWidgetResourceGulpfile
 gulp --gulpfile=gulpfileErpnetWidgetResource.js
 ```
 
-***Updating run***
+***Updating commits***
 ```shell
 cd ~/code/erpnet-v5/packages/erpnet-delivery && git cmt
 cd ~/code/erpnet-v5/packages/erpnet-migrates && git cmt

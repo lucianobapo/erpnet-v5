@@ -18,20 +18,29 @@ return [
          *   ],
          * ],
          */
-//        'users' => [
-//            'fields' => [
-//                'mandante',
-//                'name',
-//                'avatar',
-//                'password',
-//                'username',
-//                'email',
-//                'provider',
-//                'provider_id',
-//                'activation_code',
-//                'active',
-//            ],
-//        ],
+        'users' => [
+            'fields' => [
+                'mandante',
+                'name',
+                'avatar',
+                'password',
+                'username',
+                'email',
+                'provider',
+                'provider_id',
+                'activation_code',
+                'active',
+                'partner',
+            ],
+        ],
+        'providers' => [
+            'fields' => [
+                'mandante',
+                'provider',
+                'provider_id',
+                'user_id',
+            ],
+        ],
         'orders' => [
 //            'transformPresenter' => [
 //                'id' => function(\Illuminate\Database\Eloquent\Model $model){ return (int) $model->id; },
@@ -137,6 +146,7 @@ return [
                     },
                 ],
                 'mandante',
+                'user_id',
                 'nome',
                 'partnerSharedStats' => [
 //                    'label' => t('Status'),

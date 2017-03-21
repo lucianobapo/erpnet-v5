@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6ff72cb8f81321a929ec4566451b3d6f",
-    "content-hash": "5fe9079c451bee9cf0a4f89c8dd79486",
+    "hash": "00174349cc4fb9a41ac24427bd6cdda2",
+    "content-hash": "2a77df36e87ed94877e55c72292e0ef7",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.24.0",
+            "version": "3.24.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "3aacac064f40fcfdf8ecde2102a73d18b8b744d0"
+                "reference": "2823e0a0742505f655b0cb3bcdb10844f60e6078"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/3aacac064f40fcfdf8ecde2102a73d18b8b744d0",
-                "reference": "3aacac064f40fcfdf8ecde2102a73d18b8b744d0",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2823e0a0742505f655b0cb3bcdb10844f60e6078",
+                "reference": "2823e0a0742505f655b0cb3bcdb10844f60e6078",
                 "shasum": ""
             },
             "require": {
@@ -85,7 +85,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2017-03-08 23:57:18"
+            "time": "2017-03-14 00:56:44"
         },
         {
             "name": "barryvdh/laravel-cors",
@@ -661,16 +661,16 @@
         },
         {
             "name": "guzzlehttp/psr7",
-            "version": "1.4.1",
+            "version": "1.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/psr7.git",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855"
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/0d6c7ca039329247e4f0f8f8f6506810e8248855",
-                "reference": "0d6c7ca039329247e4f0f8f8f6506810e8248855",
+                "url": "https://api.github.com/repos/guzzle/psr7/zipball/f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
+                "reference": "f5b8a8512e2b58b0071a7280e39f14f72e05d87c",
                 "shasum": ""
             },
             "require": {
@@ -722,7 +722,43 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-02-27 10:51:17"
+            "time": "2017-03-20 17:10:46"
+        },
+        {
+            "name": "ilhanet/erpnet-auth",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucianobapo/erpnet-auth.git",
+                "reference": "514a97670c0d4c155609836ef5e18faade17783c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-auth/zipball/514a97670c0d4c155609836ef5e18faade17783c",
+                "reference": "514a97670c0d4c155609836ef5e18faade17783c",
+                "shasum": ""
+            },
+            "require": {
+                "ilhanet/erpnet-models": "dev-master",
+                "php": "^5.5.9 || ^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ErpNET\\Auth\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Luciano Porto",
+                    "email": "luciano.bapo@gmail.com"
+                }
+            ],
+            "time": "2017-03-18 07:48:21"
         },
         {
             "name": "ilhanet/erpnet-delivery",
@@ -730,12 +766,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucianobapo/erpnet-delivery.git",
-                "reference": "7647343bb39b3f5c3b71c44d5c79baa4aa118e95"
+                "reference": "eef5c9b538a0e8f37feae6e6d728bb2443ea8b45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucianobapo/erpnet-delivery/zipball/7647343bb39b3f5c3b71c44d5c79baa4aa118e95",
-                "reference": "7647343bb39b3f5c3b71c44d5c79baa4aa118e95",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-delivery/zipball/eef5c9b538a0e8f37feae6e6d728bb2443ea8b45",
+                "reference": "eef5c9b538a0e8f37feae6e6d728bb2443ea8b45",
                 "shasum": ""
             },
             "require": {
@@ -758,7 +794,7 @@
                     "email": "luciano.bapo@gmail.com"
                 }
             ],
-            "time": "2017-03-09 08:06:58"
+            "time": "2017-03-21 05:48:52"
         },
         {
             "name": "ilhanet/erpnet-file-manager",
@@ -844,12 +880,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucianobapo/erpnet-migrates.git",
-                "reference": "fa0c492195d26b7cfc0c25c45c8653ae1a4d81c7"
+                "reference": "53b7346b519c7cbe6081d92fa3277eb532e6c5e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucianobapo/erpnet-migrates/zipball/fa0c492195d26b7cfc0c25c45c8653ae1a4d81c7",
-                "reference": "fa0c492195d26b7cfc0c25c45c8653ae1a4d81c7",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-migrates/zipball/53b7346b519c7cbe6081d92fa3277eb532e6c5e7",
+                "reference": "53b7346b519c7cbe6081d92fa3277eb532e6c5e7",
                 "shasum": ""
             },
             "require": {
@@ -871,7 +907,7 @@
                     "email": "luciano.bapo@gmail.com"
                 }
             ],
-            "time": "2017-01-28 02:40:27"
+            "time": "2017-03-21 02:58:43"
         },
         {
             "name": "ilhanet/erpnet-models",
@@ -879,12 +915,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucianobapo/erpnet-models.git",
-                "reference": "b2bc237b4dcca59eaebf87798bfad5762cf68821"
+                "reference": "e3f58855a40ec095116e7e1fb556d3da4370886c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucianobapo/erpnet-models/zipball/b2bc237b4dcca59eaebf87798bfad5762cf68821",
-                "reference": "b2bc237b4dcca59eaebf87798bfad5762cf68821",
+                "url": "https://api.github.com/repos/lucianobapo/erpnet-models/zipball/e3f58855a40ec095116e7e1fb556d3da4370886c",
+                "reference": "e3f58855a40ec095116e7e1fb556d3da4370886c",
                 "shasum": ""
             },
             "require": {
@@ -910,7 +946,7 @@
                     "email": "luciano.bapo@gmail.com"
                 }
             ],
-            "time": "2017-03-09 08:07:06"
+            "time": "2017-03-21 05:48:56"
         },
         {
             "name": "ilhanet/erpnet-social-auth",
@@ -1488,16 +1524,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.35",
+            "version": "1.0.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "dda7f3ab94158a002d9846a97dc18ebfb7acc062"
+                "reference": "d9c1698582dfbfbd092ec9c5c3325f862cdb3297"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/dda7f3ab94158a002d9846a97dc18ebfb7acc062",
-                "reference": "dda7f3ab94158a002d9846a97dc18ebfb7acc062",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/d9c1698582dfbfbd092ec9c5c3325f862cdb3297",
+                "reference": "d9c1698582dfbfbd092ec9c5c3325f862cdb3297",
                 "shasum": ""
             },
             "require": {
@@ -1567,7 +1603,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-02-09 11:33:58"
+            "time": "2017-03-18 16:02:30"
         },
         {
             "name": "league/flysystem-aws-s3-v3",
@@ -1744,16 +1780,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.22.0",
+            "version": "1.22.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558"
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/bad29cb8d18ab0315e6c477751418a82c850d558",
-                "reference": "bad29cb8d18ab0315e6c477751418a82c850d558",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
                 "shasum": ""
             },
             "require": {
@@ -1818,7 +1854,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-11-26 00:15:39"
+            "time": "2017-03-13 07:08:03"
         },
         {
             "name": "mtdowling/cron-expression",
@@ -2025,16 +2061,16 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.9",
+            "version": "v2.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "6968531206671f94377b01dc7888d5d1b858a01b"
+                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/6968531206671f94377b01dc7888d5d1b858a01b",
-                "reference": "6968531206671f94377b01dc7888d5d1b858a01b",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/634bae8e911eefa89c1abfbf1b66da679ac8f54d",
+                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d",
                 "shasum": ""
             },
             "require": {
@@ -2069,7 +2105,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-03-03 20:43:42"
+            "time": "2017-03-13 16:27:32"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -2219,16 +2255,16 @@
         },
         {
             "name": "prettus/l5-repository",
-            "version": "2.6.9",
+            "version": "2.6.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/andersao/l5-repository.git",
-                "reference": "ae9e9eb5f824ed7c799f1df43378b8b7bc65119a"
+                "reference": "12aadec101505d4f8892ae0257818c63f0a28b6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/ae9e9eb5f824ed7c799f1df43378b8b7bc65119a",
-                "reference": "ae9e9eb5f824ed7c799f1df43378b8b7bc65119a",
+                "url": "https://api.github.com/repos/andersao/l5-repository/zipball/12aadec101505d4f8892ae0257818c63f0a28b6e",
+                "reference": "12aadec101505d4f8892ae0257818c63f0a28b6e",
                 "shasum": ""
             },
             "require": {
@@ -2275,7 +2311,7 @@
                 "model",
                 "repository"
             ],
-            "time": "2017-03-05 11:23:49"
+            "time": "2017-03-15 14:41:04"
         },
         {
             "name": "prettus/laravel-validation",
@@ -2416,16 +2452,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.2",
+            "version": "v0.8.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "97113db4107a4126bef933b60fea6dbc9f615d41"
+                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/97113db4107a4126bef933b60fea6dbc9f615d41",
-                "reference": "97113db4107a4126bef933b60fea6dbc9f615d41",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
+                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
                 "shasum": ""
             },
             "require": {
@@ -2485,25 +2521,25 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-03-01 00:13:29"
+            "time": "2017-03-19 21:40:44"
         },
         {
             "name": "ramsey/uuid",
-            "version": "3.5.2",
+            "version": "3.6.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ramsey/uuid.git",
-                "reference": "5677cfe02397dd6b58c861870dfaa5d9007d3954"
+                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ramsey/uuid/zipball/5677cfe02397dd6b58c861870dfaa5d9007d3954",
-                "reference": "5677cfe02397dd6b58c861870dfaa5d9007d3954",
+                "url": "https://api.github.com/repos/ramsey/uuid/zipball/0b7bdfb180e72c8d76e75a649ced67e392201458",
+                "reference": "0b7bdfb180e72c8d76e75a649ced67e392201458",
                 "shasum": ""
             },
             "require": {
                 "paragonie/random_compat": "^1.0|^2.0",
-                "php": ">=5.4"
+                "php": "^5.4 || ^7.0"
             },
             "replace": {
                 "rhumsaa/uuid": "self.version"
@@ -2567,7 +2603,7 @@
                 "identifier",
                 "uuid"
             ],
-            "time": "2016-11-22 19:21:44"
+            "time": "2017-03-18 15:38:09"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2743,7 +2779,7 @@
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -4188,16 +4224,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.15",
+            "version": "5.7.17",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "b99112aecc01f62acf3d81a3f59646700a1849e5"
+                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/b99112aecc01f62acf3d81a3f59646700a1849e5",
-                "reference": "b99112aecc01f62acf3d81a3f59646700a1849e5",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/68752b665d3875f9a38a357e3ecb35c79f8673bf",
+                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf",
                 "shasum": ""
             },
             "require": {
@@ -4266,7 +4302,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-02 15:22:43"
+            "time": "2017-03-19 16:52:12"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4951,7 +4987,7 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v3.2.5",
+            "version": "v3.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
@@ -5012,6 +5048,7 @@
         "ilhanet/erpnet-migrates": 20,
         "ilhanet/erpnet-models": 20,
         "ilhanet/erpnet-social-auth": 20,
+        "ilhanet/erpnet-auth": 20,
         "ilhanet/erpnet-widget-resource": 20,
         "dingo/api": 20,
         "ilhanet/erpnet-file-manager": 20,
