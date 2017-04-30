@@ -31,6 +31,18 @@ return [
                 'activation_code',
                 'active',
                 'partner',
+                'providers',
+            ],
+        ],
+        'subscriptions' => [
+            'fields' => [
+                'user_id',
+                'name',
+                'braintree_id',
+                'braintree_plan',
+                'quantity',
+                'trial_ends_at',
+                'ends_at',
             ],
         ],
         'providers' => [

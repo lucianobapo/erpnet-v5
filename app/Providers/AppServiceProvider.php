@@ -13,7 +13,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        if (class_exists(\Laravel\Cashier\CashierServiceProvider::class)){
+            \Braintree_Configuration::environment(config('services.braintree.environment'));
+            \Braintree_Configuration::merchantId(config('services.braintree.merchant_id'));
+            \Braintree_Configuration::publicKey(config('services.braintree.public_key'));
+            \Braintree_Configuration::privateKey(config('services.braintree.private_key'));
+            \Laravel\Cashier\Cashier::useCurrency('brl', 'R$');
+        }
+
     }
 
     /**
@@ -26,6 +33,12 @@ class AppServiceProvider extends ServiceProvider
 
         if (config('app.env')=='local' && class_exists(\Barryvdh\Debugbar\ServiceProvider::class))
             $this->app->register(\Barryvdh\Debugbar\ServiceProvider::class);
+
+        if (class_exists(\Laravel\Cashier\CashierServiceProvider::class))
+            $this->app->register(\Laravel\Cashier\CashierServiceProvider::class);
+
+        if (class_exists(\ErpNET\Bot\Providers\ErpnetBotServiceProvider::class))
+            $this->app->register(\ErpNET\Bot\Providers\ErpnetBotServiceProvider::class);
 
         if (class_exists(\ErpNET\Migrates\Providers\ErpnetMigratesServiceProvider::class))
             $this->app->register(\ErpNET\Migrates\Providers\ErpnetMigratesServiceProvider::class);
